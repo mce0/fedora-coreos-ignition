@@ -107,7 +107,7 @@ systemd:
         [Install]
         WantedBy=multi-user.target
     - name: docker-compose-updater@.service
-      enabled: false
+      enabled: true
       contents: |
         [Unit]
         Description=Docker Compose Updater for /srv/%I
@@ -125,7 +125,7 @@ systemd:
         ExecStart=/usr/bin/docker compose pull
         ExecStart=/usr/bin/docker compose up -d
     - name: docker-compose-updater@.timer
-      enabled: false
+      enabled: true
       contents: |
         [Unit]
         Description=Run docker-compose-updater for /srv/%I once a week, 15 mintues after OS updates

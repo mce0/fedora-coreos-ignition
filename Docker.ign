@@ -239,12 +239,12 @@
       },
       {
         "contents": "[Unit]\nDescription=Docker Compose Updater for /srv/%I\nAfter=network-online.target\nAfter=docker.service\nRequires=docker.service\n\n[Service]\nType=oneshot\nUser=root\nGroup=root\nWorkingDirectory=/srv/%i\nExecStart=/usr/bin/docker image prune -f -a --filter 'until=240h'\n#ExecStart=/usr/bin/git pull\nExecStart=/usr/bin/docker compose pull\nExecStart=/usr/bin/docker compose up -d\n",
-        "enabled": false,
+        "enabled": true,
         "name": "docker-compose-updater@.service"
       },
       {
         "contents": "[Unit]\nDescription=Run docker-compose-updater for /srv/%I once a week, 15 mintues after OS updates\n\n[Timer]\nOnCalendar=Fri 0:15\nPersistent=true\n\n[Install]\nWantedBy=timers.target\n",
-        "enabled": false,
+        "enabled": true,
         "name": "docker-compose-updater@.timer"
       },
       {
