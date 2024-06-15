@@ -1,2 +1,2 @@
 # Fedora-CoreOS-Ignition
-Ignition configurations for Fedora CoreOS
+Ignition configurations for Fedora CoreOS based on [TommyTran732/Fedora-CoreOS-Ignition](https://github.com/TommyTran732/Fedora-CoreOS-Ignition) and modified for my personal use
